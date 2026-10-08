@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Prueba Convoy Rebelde: protege la locomotora y la carga, elige ramales y organiza tus cinco vagones de equipo.">
+  <title>Convoy Rebelde · versión en pruebas</title>
+  <link rel="stylesheet" href="portada.css">
+  <script src="portada.js" defer></script>
+</head>
+<body>
+  <a class="saltar" href="#juego">Ir al juego</a>
+  <header class="cabecera">
+    <a class="marca" href="#inicio">CONVOY <span>REBELDE</span></a>
+    <nav aria-label="Accesos de la página">
+      <a href="#primeros-pasos">Cómo empezar</a>
+      <a href="#controles">Controles</a>
+      <a id="guia-pdf" href="#" hidden>Guía PDF</a>
+    </nav>
+  </header>
+  <main>
+    <section class="presentacion" id="inicio" aria-labelledby="titulo">
+      <div class="intro">
+        <p class="estado-edicion">VERSIÓN EN PRUEBAS <span id="version">1.0.0-rc.9</span></p>
+        <h1 id="titulo">La carga debe<br>llegar intacta.</h1>
+        <p class="descripcion">Protege la locomotora y la carga. Organiza tus cinco vagones de equipo y elige el ramal antes de cada cruce.</p>
+        <div class="acciones-intro">
+          <button class="primario" id="jugar" type="button" aria-controls="area-juego">Jugar en el navegador <span aria-hidden="true">↗</span></button>
+          <a class="enlace" href="#primeros-pasos">Leer la guía rápida</a>
+        </div>
+        <p class="nota">La marcha y los ataques son automáticos. Tú decides cuándo frenar, usar Impulso y reorganizar el convoy.</p>
+      </div>
+      <aside class="carta-ruta" aria-label="Primera ruta">
+        <p class="rotulo">PRIMERA MISIÓN</p>
+        <h2>Agua para<br> el andén</h2>
+        <p>Cantera del Cobre</p>
+        <div class="linea-ruta" aria-hidden="true"><i></i><span></span><i></i><span></span><i></i></div>
+        <p class="encargo">Entrega agua de emergencia y conserva la locomotora y su carga.</p>
+        <small>Elige la estación del mapa y pulsa <strong>INICIAR MISIÓN</strong>.</small>
+      </aside>
+    </section>
+
+    <section class="zona-juego" id="juego" aria-labelledby="titulo-juego">
+      <div class="barra-juego">
+        <div><p class="rotulo">ACCESO A LA PRUEBA</p><h2 id="titulo-juego">Tu convoy</h2></div>
+        <button class="secundario" id="ampliar" type="button" disabled>Ampliar juego</button>
+      </div>
+      <div id="area-juego" class="area-juego" data-abierto="false">
+        <div class="previo" id="previo">
+          <span class="marca-via" aria-hidden="true">CR</span>
+          <p>El juego se carga al pulsar <strong>Jugar en el navegador</strong>.</p>
+          <p>Después, haz clic o toca dentro del juego para usar sus controles y activar el sonido.</p>
+        </div>
+      </div>
+      <p id="estado-carga" class="estado-carga" role="status" aria-live="polite">Todavía no se ha cargado el juego.</p>
+      <p class="nota-juego">Haz clic dentro para usar el teclado. Pausa antes de consultar esta página. <a id="acceso-directo" href="juego/index.html">Abrir el juego directamente</a>.</p>
+      <noscript><p>Activa JavaScript o usa el acceso directo al juego.</p></noscript>
+    </section>
+
+    <section class="guia" id="primeros-pasos" aria-labelledby="titulo-guia">
+      <p class="rotulo">GUÍA RÁPIDA</p>
+      <h2 id="titulo-guia">Del mapa al asalto</h2>
+      <ol class="pasos">
+        <li><span class="numero">01</span><div><h3>Elige un encargo</h3><p>Selecciona una estación y lee su misión. Pulsa <strong>INICIAR MISIÓN</strong> para salir. En un perfil nuevo, empieza por <strong>Agua para el andén</strong>.</p></div></li>
+        <li><span class="numero">02</span><div><h3>Decide antes del cruce</h3><p>Pulsa <strong>SEGURO</strong> o <strong>RIESGO</strong>; cada botón muestra el módulo de ese ramal. Cuando la ruta quede fijada, la elección estará confirmada. Mantén <strong>FRENO</strong> para entrar por debajo del límite de acoplamiento mostrado.</p></div></li>
+        <li><span class="numero">03</span><div><h3>Prepara los cinco puestos</h3><p>En el taller, toca un vagón o tarjeta para ver su función. Arrastra sobre otro puesto para intercambiar el orden. <strong>INSTALAR</strong> ocupa el primer puesto libre; <strong>RETIRAR DEL CONVOY</strong> devuelve el módulo al almacén. <strong>VER</strong> abre el detalle completo.</p><p>Locomotora y carga son fijas. Los vecinos vivos pueden trabajar juntos; un puesto vacío o averiado interrumpe esa relación. Pulsa <strong>SALIR A LA VÍA</strong> cuando estés preparado.</p></div></li>
+        <li><span class="numero">04</span><div><h3>Defiende la carga</h3><p>Los módulos atacan por sí solos. Atiende los preavisos y su indicación de frenado. <strong>IMPULSAR</strong> se puede usar cuando diga <strong>LISTO</strong>: necesita un blanco vivo, presión suficiente y recarga terminada.</p><p><strong>FALTA PRESIÓN</strong>, <strong>RECARGA</strong> y <strong>SIN BLANCOS</strong> explican el bloqueo. El botón muestra el coste. Perder la locomotora o la carga termina la misión.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="consulta" id="controles" aria-labelledby="titulo-controles">
+      <div>
+        <p class="rotulo">RATÓN, TECLADO O PANTALLA TÁCTIL</p>
+        <h2 id="titulo-controles">Controles</h2>
+        <dl class="teclas">
+          <div><dt>Frenar</dt><dd><kbd>Espacio</kbd> mantenido</dd></div>
+          <div><dt>Ramal Seguro</dt><dd><kbd>A</kbd> o <kbd>←</kbd></dd></div>
+          <div><dt>Ramal Riesgo</dt><dd><kbd>D</kbd> o <kbd>→</kbd></dd></div>
+          <div><dt>Impulso disponible</dt><dd><kbd>E</kbd></dd></div>
+          <div><dt>Pausar / continuar</dt><dd><kbd>Esc</kbd></dd></div>
+          <div><dt>Ordenar en taller</dt><dd>Arrastrar vagón o tarjeta</dd></div>
+        </dl>
+        <p>En pantalla táctil, usa los botones del juego y arrastra los vagones o tarjetas. Suelta <strong>FRENO</strong> para recuperar la marcha.</p>
+      </div>
+      <div class="continuidad" id="guardado">
+        <p class="rotulo">VOLVER A TU CONVOY</p>
+        <h2>Pausa y campaña</h2>
+        <p><strong>PAUSA</strong> o <kbd>Esc</kbd> detiene el viaje. Pulsa <strong>CONTINUAR</strong> para seguir.</p>
+        <p>Tras una victoria, vuelve al mapa y elige la siguiente misión desbloqueada. Las rutas cerradas permiten leer su encargo, pero requieren completar la misión anterior. Los jefes se encuentran al avanzar por las misiones.</p>
+        <p><strong>CONTINUAR CONVOY</strong> aparece cuando hay una estación guardada. Vuelve a esa estación y su organización; no al instante exacto en que cerraste el navegador.</p>
+        <p class="nota">El progreso se conserva en este navegador si permite el almacenamiento. Usa la misma dirección y navegador para volver a tu perfil. Borrar los datos del sitio puede eliminarlo.</p>
+      </div>
+    </section>
+  </main>
+  <footer><p>Convoy Rebelde · versión en pruebas</p><p>Compras y anuncios no están habilitados.</p></footer>
+</body>
+</html>

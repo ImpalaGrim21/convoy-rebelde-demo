@@ -1,0 +1,64 @@
+name: Publicar demo jugable
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/configure-pages@v5
+      - name: Leer la distribución fijada
+        run: |
+          python - <<'PY'
+          import json, os
+          config = json.load(open('deployment.json', encoding='utf-8'))
+          with open(os.environ['GITHUB_ENV'], 'a') as env:
+              env.write('CONVOY_TAG=' + config['tag'] + '\n')
+              env.write('CONVOY_ASSET=' + config['asset'] + '\n')
+          PY
+      - name: Descargar la versión publicada
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release download "$CONVOY_TAG" --repo "$GITHUB_REPOSITORY" --pattern "$CONVOY_ASSET" --dir package
+      - name: Verificar y montar el sitio
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib, shutil, zipfile
+          config = json.load(open('deployment.json', encoding='utf-8'))
+          manifest = json.load(open('manifest-web.json', encoding='utf-8'))
+          archive = pathlib.Path('package') / config['asset']
+          assert hashlib.file_digest(archive.open('rb'), 'sha256').hexdigest() == config['sha256'], 'ZIP distinto de la distribución fijada'
+          site = pathlib.Path('_site')
+          game = site / 'juego'
+          game.mkdir(parents=True)
+          expected = {f['archivo']: f for f in manifest['archivos']}
+          with zipfile.ZipFile(archive) as package:
+              assert set(package.namelist()) == set(expected), 'Contenido no autorizado en el ZIP'
+              for name, metadata in expected.items():
+                  assert pathlib.PurePosixPath(name).name == name, 'Ruta inválida'
+                  data = package.read(name)
+                  assert len(data) == metadata['bytes']
+                  assert hashlib.sha256(data).hexdigest() == metadata['sha256'], name
+                  (game / name).write_bytes(data)
+          for name in ['index.html', 'portada.css', 'portada.js', 'config.json', 'manifest-web.json']:
+              shutil.copyfile(name, site / name)
+          (site / '.nojekyll').touch()
+          print('Distribución íntegra: nueve archivos del juego, portada y manifestación.')
+          PY
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Desplegar
+        id: deployment
+        uses: actions/deploy-pages@v4
