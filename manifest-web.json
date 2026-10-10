@@ -1,15 +1,11 @@
 {
-  "juego": "Convoy Rebelde",
-  "version": "1.0.0-rc.9",
-  "fecha_utc": "2026-10-08T18:01:02.852973+00:00",
-  "estado": "version_en_pruebas",
-  "motor": "Godot 4.7.2",
-  "proveedores_activos": false,
+  "version": "convoy-rebelde-progreso-20261010-corte04",
+  "generado_utc": "2026-10-10T22:55:26.207894+00:00",
   "archivos": [
     {
       "archivo": "index.apple-touch-icon.png",
-      "bytes": 23305,
-      "sha256": "c6c9f5b5cb085ffb5dda64423171b9fef5828db1cfcb31c3a1447ce79080c1dc"
+      "bytes": 7462,
+      "sha256": "cdc350dd3dcfa202a722c8dca698a69d7238926cc4a366aa3093c8ce2ac2faea"
     },
     {
       "archivo": "index.audio.position.worklet.js",
@@ -23,13 +19,13 @@
     },
     {
       "archivo": "index.html",
-      "bytes": 5448,
-      "sha256": "1ecf50edad2c9c7df9acdbe528a4f6c387ce14dd95366c492941dc5764b6b07e"
+      "bytes": 5566,
+      "sha256": "574f30c8831ee58deba7847f542b48123ce3d8b3433ba07814b3ea93b7cbd9c8"
     },
     {
       "archivo": "index.icon.png",
-      "bytes": 124839,
-      "sha256": "5cb66c56742d1893e73528ffe934c311b56a2d14b03c9d2f944c758d67cc7e15"
+      "bytes": 7174,
+      "sha256": "55f002c10843188cb6b0ae9c263b5ae3f4e54f6415a10f951610a5f6fdd4c950"
     },
     {
       "archivo": "index.js",
@@ -38,8 +34,8 @@
     },
     {
       "archivo": "index.pck",
-      "bytes": 153056404,
-      "sha256": "e96f98b3a82693fc40341c6bcfb0a0a1fe995aa51995f13173918f583b189e92"
+      "bytes": 37034992,
+      "sha256": "60111f254bc85e781be4180769c07c575137a524eefddd9e2cd98ad570ac6fe1"
     },
     {
       "archivo": "index.png",
@@ -51,5 +47,8 @@
       "bytes": 39514754,
       "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
     }
-  ]
+  ],
+  "source_manifest_sha256": "2b92dd8fd316a6dfebee98a85c87df5bc24eef09235409a6bba65375a049aa09",
+  "source_build_id": "4.0.0-reconstruccion-premium-staging_04-20261010T224650813Z-3d2065b2",
+  "source_version": "4.0.0-reconstruccion-premium"
 }
