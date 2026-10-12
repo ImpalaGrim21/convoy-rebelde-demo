@@ -1,7 +1,75 @@
 {
-  "version": "convoy-rebelde-progreso-20261010-corte04",
-  "generado_utc": "2026-10-10T22:55:26.207894+00:00",
+  "version": "convoy-rebelde-6.2.2-dinamismo18-20261012",
+  "source_build_id": "6_2_2_dinamismo_guardado_compacto_20261012_18",
+  "source_version": "6.2.2-dinamismo-guardado",
+  "tutorialVersion": 2,
+  "pack_sha256": "da85920a86a235512d3e06fa8e0dafa839abb5a3e003e8a9b7adc7ff43d42454",
   "archivos": [
+    {
+      "archivo": "catalog/cards/acorazado.png",
+      "bytes": 147891,
+      "sha256": "2f82c0de00fdbf9b1785261e8577722776b15f61d8e07e20eabf992ecad3a807"
+    },
+    {
+      "archivo": "catalog/cards/artillero.png",
+      "bytes": 159853,
+      "sha256": "4286db8011dc11a5a6176446dcb6a3eb1d6bea5743dbb08ad5ac06c5a89db1b3"
+    },
+    {
+      "archivo": "catalog/cards/capataz.png",
+      "bytes": 174264,
+      "sha256": "c8d032398a0dda7ce209d918693aee42570217acdbaaaf6cbd81de04290de367"
+    },
+    {
+      "archivo": "catalog/cards/coloso.png",
+      "bytes": 146982,
+      "sha256": "120369ae85e07e33362d65976064b8c0768ddda579555ad8d2c15ddceae3a9ab"
+    },
+    {
+      "archivo": "catalog/cards/dron.png",
+      "bytes": 117641,
+      "sha256": "b1a4d1640294f6cfb49926b24a153261d6ffb5c457f7fb7097f4b1e4e207ae97"
+    },
+    {
+      "archivo": "catalog/cards/explorador.png",
+      "bytes": 122439,
+      "sha256": "0589c596208dee4eae8c27b8071c63576b78bed62f08b643d4871ad6b335de4c"
+    },
+    {
+      "archivo": "catalog/cards/matriarca.png",
+      "bytes": 194630,
+      "sha256": "180459e46da0337bbc08b5c3aaa51213aae550998c4cac68b2e27c906dd17861"
+    },
+    {
+      "archivo": "catalog/cards/rompevias.png",
+      "bytes": 122902,
+      "sha256": "ac60e9c1586826376abd290e3b5d29d2bcd7b91a5290e50647069f8fd42c271a"
+    },
+    {
+      "archivo": "catalog/cards/sabotador.png",
+      "bytes": 136389,
+      "sha256": "f3fb8318993aba5dde04ad4f018d77976841c10683fd9e1e0c5d2ad0a7158714"
+    },
+    {
+      "archivo": "catalog/cards/saqueador.png",
+      "bytes": 147351,
+      "sha256": "513a583e359d48230c6f44dec5243a3aeb9aaec103e2d243e4665e2f9403594b"
+    },
+    {
+      "archivo": "catalog/cards/vigia.png",
+      "bytes": 124137,
+      "sha256": "63842fd53c6b81344172dd7fa0d205a83148204d75737142b37eb8a76dbd40d3"
+    },
+    {
+      "archivo": "catalog/catalog.json",
+      "bytes": 5502,
+      "sha256": "a4120fecb9ca01c251c6a1985811d6d4a24c28c336f6b9d4ae7f2a5d67910734"
+    },
+    {
+      "archivo": "catalog/index.html",
+      "bytes": 33356,
+      "sha256": "e9371eba0175e97406574fcaf8075b39b2275a86e21c2cac7985582a0ad9f7dd"
+    },
     {
       "archivo": "index.apple-touch-icon.png",
       "bytes": 7462,
@@ -19,8 +87,8 @@
     },
     {
       "archivo": "index.html",
-      "bytes": 5566,
-      "sha256": "574f30c8831ee58deba7847f542b48123ce3d8b3433ba07814b3ea93b7cbd9c8"
+      "bytes": 2746,
+      "sha256": "26bebb08dad8805c02f124504d0e781bae12daa45b06cb7d3fd075c4f5fb4554"
     },
     {
       "archivo": "index.icon.png",
@@ -33,11 +101,6 @@
       "sha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba"
     },
     {
-      "archivo": "index.pck",
-      "bytes": 37034992,
-      "sha256": "60111f254bc85e781be4180769c07c575137a524eefddd9e2cd98ad570ac6fe1"
-    },
-    {
       "archivo": "index.png",
       "bytes": 21443,
       "sha256": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e"
@@ -46,9 +109,21 @@
       "archivo": "index.wasm",
       "bytes": 39514754,
       "sha256": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0"
+    },
+    {
+      "archivo": "juego18-da85920a86a23551.pck",
+      "bytes": 32919196,
+      "sha256": "da85920a86a235512d3e06fa8e0dafa839abb5a3e003e8a9b7adc7ff43d42454"
+    },
+    {
+      "archivo": "lab/index.html",
+      "bytes": 3125,
+      "sha256": "d12f1dbc2a69eeb49c73576d3871c4b9fe5a20317e3edf2a897d25a13f244ae6"
+    },
+    {
+      "archivo": "release.json",
+      "bytes": 1579,
+      "sha256": "0a73339400c55296306de5e50d54aaf6e5c3355cfa96a73b903886758bbd6f9c"
     }
-  ],
-  "source_manifest_sha256": "2b92dd8fd316a6dfebee98a85c87df5bc24eef09235409a6bba65375a049aa09",
-  "source_build_id": "4.0.0-reconstruccion-premium-staging_04-20261010T224650813Z-3d2065b2",
-  "source_version": "4.0.0-reconstruccion-premium"
+  ]
 }

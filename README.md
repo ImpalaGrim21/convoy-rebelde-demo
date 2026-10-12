@@ -1,13 +1,15 @@
-# Convoy Rebelde · demo jugable
+# Convoy Rebelde
 
-Versión de prueba **1.0.0-rc.9**, del 8 de octubre de 2026.
+[Jugar en el navegador](https://impalagrim21.github.io/convoy-rebelde-demo/)
 
-Acceso: https://impalagrim21.github.io/convoy-rebelde-demo/
+Protege el tren que lleva suministros a comunidades aisladas. Antes de cada tramo, elige una vía: cambia los atacantes, el peligro y las piezas que puedes recuperar. La distancia restante muestra cuánto falta; al llegar, tendrás que acabar con los atacantes que sigan activos.
 
-Protege un tren de suministros, elige ramales y reorganiza sus equipos entre combates. La campaña avanza de forma progresiva. El acabado visual, el equilibrio y el rendimiento siguen en revisión. Compras y anuncios permanecen inactivos.
+Arrastra el mando para apuntar y mantén el disparo. Observa las señales de ataque y pulsa **Proteger** cuando el impacto esté cerca. El blindaje de cada enemigo y su exposición afectan al daño; la barra junto al blanco muestra su resistencia. Si la integridad del tren llega a cero, puedes reintentar la misión. Al reintentar, vuelves al saldo y al equipo con que comenzaste esa misión.
 
-El enlace abre exclusivamente el juego, ocupando toda la ventana del navegador. La primera carga descarga el juego completo y puede tardar. El progreso se conserva localmente en el navegador; no se sincroniza entre dispositivos.
+Entre combates, recupera piezas en canales, rodillos o compuertas. Ajusta el punto de salida, lanza los lotes y corrige su caída hacia los multiplicadores. Cada parada permite **una compra**: reparar, mejorar el equipo o conseguir una ayuda para la recuperación. También puedes ahorrar. Las cartas muestran el coste y el cambio que recibirás antes de confirmar.
 
-Este repositorio contiene únicamente la configuración de publicación. La distribución del motor y del juego está en la release fijada por `deployment.json`. No contiene el proyecto editable, documentos internos ni el informe ejecutivo, que se entrega por separado.
+La guía inicial te permite practicar el ciclo. Puedes repetirla desde **Ayuda → Repetir guía**. La campaña contiene 18 misiones. El menú permite cambiar la mano de los controles, el modo de disparo, el sonido y el movimiento de las ayudas.
 
-El flujo **Publicar demo jugable** descarga esa release, verifica sus huellas y publica el sitio mediante GitHub Pages. Los archivos exportados se conservan sin alteraciones.
+Puedes jugar con ratón o controles táctiles. La primera carga descarga el motor y el juego. El progreso se guarda en este navegador; el enlace local y GitHub Pages mantienen partidas separadas.
+
+Este repositorio contiene la configuración de publicación. La release fijada en `deployment.json` se comprueba contra `manifest-web.json` antes de desplegar. Las fuentes editables y los recursos de trabajo se conservan por separado.
